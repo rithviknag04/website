@@ -22,22 +22,22 @@ let cart = document.querySelectorAll(".orderButton");
 /**/ 
 let items = [{
         name: "FRENCH PRESS",
-        price: 7.00,
+        price: 650,
         insideCart: 0
     },
     {
         name: "IBRIK",
-        price: 8.00,
+        price: 750,
         insideCart: 0
     },
     {
         name: "MOKAPOT",
-        price: 8.00,
+        price: 750,
         insideCart: 0
     },
     {
         name: "POUROVER",
-        price: 5.00,
+        price: 500,
         insideCart: 0
     }
 ];
@@ -123,9 +123,9 @@ function cartDisplay() {
             itemsContainer.innerHTML += `  
                 <tr> 
                     <td><span>${product.name}</span><i class="fas fa-trash-alt" id="deleteBin"></i></td>
-                    <td>€${product.price}</td>
+                    <td>Rs.${product.price}</td>
                     <td><i class="cartDecrement fas fa-minus-square"></i>&nbsp;<span>${product.insideCart}</span>&nbsp;<i class="cartIncrement fas fa-plus-square"></i></td>
-                    <td>€${product.insideCart * product.price}</td>        
+                    <td>Rs.${product.insideCart * product.price}</td>        
                 </tr>    
             `;
         });
@@ -136,7 +136,7 @@ function cartDisplay() {
                 Total  
             </p>
             <p class="cartTotalAmount">
-                €${productTotal}
+                Rs.${productTotal}
             </p>
         </tr>
     `;
